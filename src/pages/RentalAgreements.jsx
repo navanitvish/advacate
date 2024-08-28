@@ -6,48 +6,48 @@ const rentalAgreementData = [
   {
     title: "House rent agreement",
     description: "Details about house rent agreements.",
-    image: "/src/assets/image (1).png",
+    image: "https://cdn.pixabay.com/photo/2018/09/11/19/24/deutsche-bahn-3670413_640.jpg",
   },
   {
     title: "Flat rent agreement",
     description: "Details about flat rent agreements.",
-    image: "/src/assets/image (2).png",
+    image: "https://cdn.pixabay.com/photo/2017/01/14/10/56/people-1979261_1280.jpg",
   },
   {
     title: "Furnished house rent agreement",
     description: "Details about furnished house rent agreements.",
-    image: "/src/assets/image (3).png",
+    image: "https://cdn.pixabay.com/photo/2018/09/11/19/24/deutsche-bahn-3670413_640.jpg",
   },
   {
     title: "Quick rental agreement",
     description: "Details about quick rental agreements.",
-    image: "/src/assets/image (4).png",
+    image: "https://cdn.pixabay.com/photo/2017/01/14/10/56/people-1979261_1280.jpg",
   },
   {
     title: "Residential lease agreement",
     description: "Details about residential lease agreements.",
-    image: "/src/assets/image (1).png",
+    image: "https://cdn.pixabay.com/photo/2018/09/11/19/24/deutsche-bahn-3670413_640.jpg",
   },
   {
     title: "Furnished flat rental agreement",
     description: "Details about furnished flat rental agreements.",
-    image: "/src/assets/image (2).png",
+    image: "https://cdn.pixabay.com/photo/2017/01/14/10/56/people-1979261_1280.jpg",
   },
   {
     title: "Room rental agreement",
     description: "Details about room rental agreements.",
-    image: "/src/assets/image (4).png",
+    image: "https://cdn.pixabay.com/photo/2018/09/11/19/24/deutsche-bahn-3670413_640.jpg",
   },
   {
     title: "Lease of furnished house for residential purpose",
     description:
       "Details about lease of furnished house for residential purposes.",
-    image: "/src/assets/image (3).png",
+    image: "https://cdn.pixabay.com/photo/2018/09/11/19/24/deutsche-bahn-3670413_640.jpg",
   },
   {
     title: "Paying guest agreement",
     description: "Details about paying guest agreements.",
-    image: "/src/assets/image (1).png",
+    image: "https://cdn.pixabay.com/photo/2018/09/11/19/24/deutsche-bahn-3670413_640.jpg",
   },
 ];
 

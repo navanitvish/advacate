@@ -26,7 +26,7 @@ const eCommerceAgreementData = [
   {
     title: "Cancellation, returns and refund policy",
     description: "Details about cancellation, returns, and refund policies.",
-    image: "/src/assets/image (1).png",
+    image: "https://cdn.pixabay.com/photo/2019/02/14/23/01/old-postcards-3997599_640.jpg",
   },
   {
     title: "E-commerce website development and services agreement",
@@ -41,7 +41,7 @@ const eCommerceAgreementData = [
   {
     title: "Internet banking services agreement",
     description: "Details about internet banking services agreements.",
-    image: "/src/assets/image (4).png",
+    image: "https://cdn.pixabay.com/photo/2019/02/14/23/01/old-postcards-3997599_640.jpg",
   },
   {
     title: "Domain name assignment agreement",
