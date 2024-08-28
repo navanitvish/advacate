@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Services from "./pages/Services";
 import Products from "./pages/Products";
-import LawyerConnect from "./pages/LawyerConnect";
+
 import RentalAgreements from "./pages/RentalAgreements";
 import Footer from "./components/Footer";
 import LawyersConnectPage from './pages/LawyersConnectPage';
@@ -30,7 +30,7 @@ function App() {
         <Route path="/services/e-commerce-contracts" element={<Ecommercecontracts />} />
         <Route path="/lawyers-connect" element={<LawyersConnectPage />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/lawyers-connect" element={<LawyerConnect />} />
+      
         
         {/* Add more routes as needed */}
       </Routes>

@@ -1,27 +1,27 @@
 // src/pages/RentalAgreements.jsx
 import React from "react";
-import image1 from "/src/assets/Rectangle 1.png";
+
 
 const eCommerceAgreementData = [
   {
     title: "Terms of use/terms of service of e-commerce website",
     description: "Details about terms of use and service for e-commerce websites.",
-    image: "/src/assets/image (1).png", // Update image paths as necessary
+    image: "https://cdn.pixabay.com/photo/2020/11/03/15/32/man-5710164_640.jpg", // Update image paths as necessary
   },
   {
     title: "Privacy Policy",
     description: "Details about privacy policies for websites.",
-    image: "/src/assets/image (2).png",
+    image: "https://cdn.pixabay.com/photo/2015/02/01/18/27/hammer-620011_640.jpg",
   },
   {
     title: "Cookie policy for a website",
     description: "Details about cookie policies for websites.",
-    image: "/src/assets/image (3).png",
+    image: "https://cdn.pixabay.com/photo/2024/06/02/08/13/signature-8803705_640.png",
   },
   {
     title: "Subscription service agreement",
     description: "Details about subscription service agreements.",
-    image: "/src/assets/image (4).png",
+    image: "https://cdn.pixabay.com/photo/2024/01/16/10/50/ai-generated-8511918_640.jpg",
   },
   {
     title: "Cancellation, returns and refund policy",
@@ -31,12 +31,12 @@ const eCommerceAgreementData = [
   {
     title: "E-commerce website development and services agreement",
     description: "Details about agreements for e-commerce website development and services.",
-    image: "/src/assets/image (2).png",
+    image: "https://cdn.pixabay.com/photo/2015/02/01/18/27/hammer-620011_640.jpg",
   },
   {
     title: "Terms and conditions of sale",
     description: "Details about terms and conditions of sale.",
-    image: "/src/assets/image (3).png",
+    image: "https://cdn.pixabay.com/photo/2024/01/16/10/50/ai-generated-8511918_640.jpg",
   },
   {
     title: "Internet banking services agreement",
@@ -46,7 +46,7 @@ const eCommerceAgreementData = [
   {
     title: "Domain name assignment agreement",
     description: "Details about domain name assignment agreements.",
-    image: "/src/assets/image (1).png",
+    image: "https://cdn.pixabay.com/photo/2015/02/01/18/27/hammer-620011_640.jpg",
   },
 ];
 
@@ -54,7 +54,11 @@ const Ecommercecontracts = () => {
   return (
     <div className="p-6">
       <div className="relative">
-        <img src={image1} alt="Image Header" className="w-full h-auto" />
+      <img
+          src="https://cdn.pixabay.com/photo/2017/07/10/23/49/club-2492011_1280.jpg"
+          alt="Image Header"
+          className="w-full h-60 object-cover"
+        />
         <div className="absolute top-1/3 w-full text-center">
           <h2 className="text-4xl font-bold text-black">E-Commerce Agreements</h2>
         </div>

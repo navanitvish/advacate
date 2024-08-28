@@ -63,7 +63,7 @@ const RentalAgreements = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-10/12 mx-auto mt-8">
         {rentalAgreementData.map((item, index) => (
-          <div key={index} className="bg-gray-200 p-4 rounded-lg">
+          <div key={index} className="bg-gray-200 p-4 rounded-lg transform transition-transform duration-300 hover:-translate-y-4">
             <img
               src={item.image}
               alt={item.title}
