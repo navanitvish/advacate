@@ -1,0 +1,28 @@
+/* Custom CSS */
+.nav-link {
+    position: relative;
+    padding-bottom: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000; /* Adjust the color of the underline */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .dropdown-menu {
+    z-index: 100; /* Ensure this is higher than other elements */
+  }
