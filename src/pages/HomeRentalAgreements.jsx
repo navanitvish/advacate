@@ -51,7 +51,7 @@ const rentalAgreementData = [
   },
 ];
 
-const RentalAgreements = () => {
+const HomeRentalAgreements = () => {
   return (
     <div className="p-6">
       <div className="relative">
@@ -84,4 +84,4 @@ const RentalAgreements = () => {
   );
 };
 
-export default RentalAgreements;
+export default HomeRentalAgreements;
