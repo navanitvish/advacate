@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaSearch, FaUser, FaChevronDown } from "react-icons/fa";
+import { FaSearch, FaUser, FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [featuresDropdownOpen, setFeaturesDropdownOpen] = useState(false); // New state for Features dropdown
+  const [featuresDropdownOpen, setFeaturesDropdownOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -19,10 +21,13 @@ function Navbar() {
   const toggleCategory = (category) => {
     setActiveCategory(activeCategory === category ? null : category);
   };
-  const [searchOpen, setSearchOpen] = useState(false);
 
   const toggleSearch = () => {
     setSearchOpen(!searchOpen);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   const onlineServices = {
@@ -303,11 +308,11 @@ function Navbar() {
             {activeCategory === name &&
               subCategories &&
               subCategories.length > 0 && (
-                <ul className="ml-4 mt-2 p-4 bg-white border  shadow-md">
+                <ul className="ml-4 mt-2 p-4 bg-white border shadow-md">
                   {subCategories.map((subCategory) => (
                     <li
                       key={subCategory.path}
-                      className=" px-6 py-2 hover:bg-gray-200 "
+                      className="px-6 py-2 hover:bg-gray-200"
                     >
                       <Link to={subCategory.path}>{subCategory.name}</Link>
                     </li>
@@ -329,7 +334,16 @@ function Navbar() {
           </Link>
         </div>
 
-        <div className="flex space-x-4 justify-center font-semibold">
+        {/* Mobile Menu Toggle Button */}
+        <button
+          onClick={toggleMobileMenu}
+          className="block lg:hidden text-xl"
+        >
+          {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex space-x-4 justify-center font-semibold">
           <Link to="/" className="nav-link">
             Home
           </Link>
@@ -395,9 +409,9 @@ function Navbar() {
         </div>
 
         {/* Right side: Signup, Profile, and Search */}
-        <div className="flex space-x-4 items-center font-semibold">
+        <div className="hidden lg:flex space-x-4 items-center font-semibold">
           <button
-            onClick={() => setSearchOpen(!searchOpen)}
+            onClick={toggleSearch}
             className="nav-link flex items-center"
           >
             <FaSearch className="mr-1" />
@@ -416,6 +430,72 @@ function Navbar() {
             placeholder="Search..."
             className="w-full p-2 border rounded-lg"
           />
+        </div>
+      )}
+
+      {/* Mobile Menu Drawer */}
+      {mobileMenuOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-white z-40 p-6 lg:hidden">
+          <button
+            onClick={toggleMobileMenu}
+            className="absolute top-4 right-4 text-xl"
+          >
+            <FaTimes />
+          </button>
+          <div className="flex flex-col space-y-4">
+            <Link to="/" className="text-xl" onClick={toggleMobileMenu}>
+              Home
+            </Link>
+            <Link to="/about" className="text-xl" onClick={toggleMobileMenu}>
+              About Us
+            </Link>
+
+            {/* Services/Agreement Dropdown for Mobile */}
+            <button
+              onClick={toggleDropdown}
+              className="text-xl flex items-center"
+            >
+              Services/Agreement
+              <FaChevronDown className={`ml-2 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+            {dropdownOpen && (
+              <div className="ml-4 mt-2">
+                {renderServiceList(onlineServices, "Online Services")}
+                {renderServiceList(offlineServices, "Offline Services")}
+              </div>
+            )}
+
+            {/* Products/Features Dropdown for Mobile */}
+            <button
+              onClick={toggleFeaturesDropdown}
+              className="text-xl flex items-center"
+            >
+              Products/Features
+              <FaChevronDown className={`ml-2 transition-transform ${featuresDropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+            {featuresDropdownOpen && (
+              <div className="ml-4 mt-2">
+                <Link
+                  to="/products/e-stamp-paper-services"
+                  className="block p-2 hover:bg-gray-200 rounded"
+                  onClick={toggleMobileMenu}
+                >
+                  E-Stamp Paper Services
+                </Link>
+                <Link
+                  to="/products/rental-receipts"
+                  className="block p-2 hover:bg-gray-200 rounded"
+                  onClick={toggleMobileMenu}
+                >
+                  Rental Receipts
+                </Link>
+              </div>
+            )}
+
+            <Link to="/lawyers-connect" className="text-xl" onClick={toggleMobileMenu}>
+              Lawyer's Connect
+            </Link>
+          </div>
         </div>
       )}
     </nav>
