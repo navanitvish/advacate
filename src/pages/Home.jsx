@@ -1,7 +1,8 @@
 // src/pages/HomePage.jsx
 import React from "react";
-
+import Testimonials from './Testimonials'
 import TrustedBySection from "./TrustedBySection";
+import LawyerPage from "./LawyerPage";
 const featuresData = [
   {
     title: "Affidavits",
@@ -35,9 +36,9 @@ const Home = () => {
         {/* Left Side Content */}
         <div className="relative overflow-hidden flex mx-auto w-screen">
           <img
-            src="https://cdn.pixabay.com/photo/2018/01/21/10/02/shaking-hands-3096229_640.jpg"
+            src="https://cdn.pixabay.com/photo/2024/04/06/18/01/ai-generated-8679755_960_720.jpg"
             alt="Decorative Background"
-            className="w-full h-[700px]  object-contain"
+            className="w-full h-[700px]  object-cover"
           />
           <div className="absolute top-1/3 right-16   bg-[#FFF3E3] bg-opacity-80 p-6 rounded-lg shadow-lg lg:w-[400px] lg:h-[300px]">
             <div className=" text-left text-balance ">
@@ -144,27 +145,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="p-6 bg-gray-100">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Our Achievements</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className=" p-6 rounded-lg  transform transition-transform duration-300 hover:scale-105">
-              <h3 className="text-4xl font-bold mb-2">10 Million+</h3>
-              <p className="text-gray-600 text-lg">Consulting Minutes</p>
-            </div>
-            <div className=" p-6 rounded-lg  transform transition-transform duration-300 hover:scale-105">
-              <h3 className="text-4xl font-bold mb-2">5 Million</h3>
-              <p className="text-gray-600 text-lg">
-                Pages Drafted and Reviewed
-              </p>
-            </div>
-            <div className=" p-6 rounded-lg  transform transition-transform duration-300 hover:scale-105">
-              <h3 className="text-4xl font-bold mb-2">100,000</h3>
-              <p className="text-gray-600 text-lg">Start-ups Mentored</p>
-            </div>
-          </div>
-        </div>
-      </section>
+     <div>
+      <LawyerPage/>
+     </div>
+       <div>
+        <Testimonials/>
+       </div>
     </div>
   );
 };
